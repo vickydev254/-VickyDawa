@@ -13,7 +13,7 @@
     --bg-color: #111111;
     --second-bg-color: #151515;
     --text-color: white;
-    --main-color: #04fffb;
+    --main-color: #6EE7B7;
 }
 
 html {
@@ -201,13 +201,12 @@ span {
     position: relative;
 }
 
-.text-animation span::before {
-    content: 'Web Designer';
+.text-animation span::before{
+    content: 'Web Developer';
     color: var(--main-color);
-    animation: words 10s infinite;
+    animation: words 20s infinite;
 }
-
-.text-animation span::after {
+.text-animation span::after{
     content: "";
     background-color: var(--bg-color);
     position: absolute;
@@ -215,31 +214,59 @@ span {
     height: 100%;
     border-left: 3px solid var(--bg-color);
     right: -8px;
-    animation: cursor 0.8s infinite, typing 10s steps(14) infinite;
+    animation: cursor .8s infinite, typing 20s steps(14) infinite;
 }
-
-@keyframes cursor {
-    to {
+@keyframes cursor{
+    to{
         border-left: 2px solid var(--main-color);
     }
 }
-
-@keyframes words {
-    0%, 49% {
+@keyframes words{
+    0%,
+    20%{
+        content: 'Web Developer';
+    }
+    21%,
+    40%{
         content: 'Web Designer';
     }
-    50%, 100% {
+    41%,
+    60%{
+        content: 'Web Developer';
+    }
+    61%,
+    80%{
+        content: 'Web Designer';
+    }
+    81%,
+    100%{
         content: 'Web Developer';
     }
 }
-
-@keyframes typing {
-    10%, 15%, 60%, 65% {
+@keyframes typing{
+    10%,
+    15%,
+    30%,
+    35%,
+    50%,
+    55%,
+    70%,
+    75%,
+    90%,
+    95% {
         width: 0;
     }
-    5%, 20%, 55%, 70%, 85% {
+    5%,
+    20%,
+    25%,
+    40%,
+    45%,
+    60%,
+    65%,
+    80%,
+    85% {
         width: calc(100% + 8px);
-    }
+    } 
 }
 
 /* ========== ABOUT ========== */
